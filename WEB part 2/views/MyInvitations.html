@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="heb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGUBall- my invitations</title>
+    <link rel = "icon" href = "../static/Pics and Icons/ballicon.png" type = "image/x-icon" >
+    <script defer src="../static/function.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img id="site_logo" class="top-line-left" src="../static/Pics and Icons/logo-site.png" alt="Logo">
+            <a href="MyInvitations.html" id="notification" class="top-line-right">
+                <i class="fa fa-envelope fa-2x"></i>
+                <span class="badge">1</span>
+            </a>
+            <a href="../views/LogInPage.html" class="top-line-right">Logout</a>
+            <nav>
+                <a href="MyProfile.html" class="navline">My profile</a>
+                <a href="MyGames.html" class="navline">My games</a>
+                <a href="searchGames.html" class="navline">Search games</a>
+                <a href="newGame.html" class="navline">Create game</a>
+            </nav>
+        </header>
+
+        <div class="page">
+            <form class="forms">
+                <div class="formTitle">My invitations</div><br><br>
+                 <table id="games_table">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>Court</td>
+                        <td>Game's date</td>
+                        <td>Invited by</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="MyInvitations.html" id="ignore_invite" class="fa fa-minus" aria-hidden="true" title="Ignore invitation"></a></td>
+                        <td><a href="GameDetails.html" class="fa fa-plus" aria-hidden="true" title="Show more details"></a></td>
+                        <td>30/12/2022</td>
+                        <td>12:00</td>
+                        <td>Sport Center</td>
+                    </tr>
+                </tbody>
+            </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

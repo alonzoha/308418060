@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="heb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGUBall- log in or sign up</title>
+    <link rel = "icon" href = "../static/Pics and Icons/ballicon.png" type = "image/x-icon" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="../static/function.js"> </script>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img id="site_logo" class="top-line-left" src="../static/Pics and Icons/logo-site.png" alt="Logo">
+            <a href="MyInvitations.html" id="notification" class="top-line-right">
+                <i class="fa fa-envelope fa-2x"></i>
+                <span class="badge">1</span>
+            </a>
+            <a href="../views/LogInPage.html" class="top-line-right">Logout</a>
+            <nav>
+                <i class="ml2"><span>I</span> <span>L</span><span>O</span><span>V</span><span>E</span>
+                    <span>t</span><span>h</span><span>i</span><span>s</span>
+                    <span>g</span><span>a</span><span>m</span><span>e</span></i>
+            </nav>
+        </header>
+
+        <div class="page">
+            <form class="forms" action="searchGames.html" method="post">
+                <label for="Email" class="formLabel"><b>Email</b></label><br>
+                <input type="email" placeholder="Enter your email" id="Email" name="Email" required><br><br>
+                <label for="psw" class="formLabel"><b>Password</b></label><br>
+                <input type="password" placeholder="Enter password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters long, with at least one upper and lower case letter" required><br>
+                <input type="checkbox" onclick="showPassword()">
+                <i class="normalText">Show password<br><br></i>
+                <button type="submit" class="button">Log in</button><br>
+                <br><span class="normalText">New player? <a href="NewUser.html">Press here</a></span>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

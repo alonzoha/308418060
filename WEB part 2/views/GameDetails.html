@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="heb">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGUBall- game details</title>
+    <link rel = "icon" href = "../static/Pics and Icons/ballicon.png" type = "image/x-icon" >
+    <script defer src="../static/function.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body  onload="hideFriendEmail(), hideSendIcon()", dir="ltr">
+    <div class="container">
+        <header>
+            <img id="site_logo" class="top-line-left" src="../static/Pics and Icons/logo-site.png" alt="Logo">
+            <a href="MyInvitations.html" id="notification" class="top-line-right">
+                <i class="fa fa-envelope fa-2x"></i>
+                <span class="badge">1</span>
+            </a>
+            <a href="../views/LogInPage.html" class="top-line-right">Logout</a>
+            <nav>
+                <a href="MyProfile.html" class="navline">My profile</a>
+                <a href="MyGames.html" class="navline">My games</a>
+                <a href="searchGames.html" class="navline">Search games</a>
+                <a href="newGame.html" class="navline">Create game</a>
+            </nav>
+        </header>
+    
+        <div class="page">
+                <form class="forms" >
+                    <div class="formTitle">Game details</div><br><br>
+
+                    <ul id="gamesDetail">
+                        <li class="formLabelDetails"><strong>Date: &nbsp</strong>12/12/22</li>
+                        <li class="formLabelDetails"><strong>Court: &nbsp</strong>Sport Center</li>
+                        <li class="formLabelDetails"><strong>Time: &nbsp</strong>14:00</li>
+                        <li class="formLabelDetails"><strong>Max Players: &nbsp</strong>15</li>
+                        <li class="formLabelDetails"><strong>Register Players:&nbsp&nbsp&nbsp</strong>
+                            <ol>
+                                <li>Alon Zohar</li>
+                                <li>Sapir Lulvi</li>
+                                <li>Roee Gur</li>
+                            </ol>
+                        </li>
+                        <form action="searchGames.html">
+                            <input type="submit" id="signUpButt" class="button" value="Sign up" onclick="success_register()"/>
+                        </form>
+                        <div>
+                            <i>Invite friend</i>
+                            <a onclick="showInviteFriendsInput(), showSendIcon()">
+                                <i id="inviteIcon" class="fa fa-envelope fa-2x"></i>
+                            </a>
+                            <input type="email" id="Email" name="Email" placeholder="Enter friend's email" required>
+                            <input id="sendIcon" onclick="sendEmail()" type="image" src="../static/Pics and Icons/send.svg"/>
+                        </div>
+                    </ul>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
