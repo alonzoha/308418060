@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGUBall- game details</title>
+    <link rel = "icon" href = "../static/images/ballicon.png" type = "image/x-icon" >
+    <script defer src="../static/function.js"> </script>
+    <script defer src="../static/GameDetails.js"> </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body dir="ltr">
+    <div class="container">
+        <header>
+            <img id="site_logo" class="top-line-left" src="../static/images/logo-site.png" alt="Logo">
+            <button onclick="logout()" class="logout">Logout</button>
+                <nav>
+                    <a href="MyProfile.html" class="navline">My profile</a>
+                    <a href="index.html" class="navline">All games</a>
+                    <a href="MyGames.html" class="navline">My games</a>
+                    <a href="MyInvitations.html" class="navline">My invitations</a>
+                    <a href="newGame.html" class="navline">Create new game</a>
+                </nav>
+        </header>
+    
+        <div class="page">
+                <form class="forms" >
+                    <div class="formTitle">Game details</div><br><br>
+                    <ul id="gamesDetail"></ul>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+To start the application + create DB + create Tables + insert data:
+	just write: node index.js
+
+The requirements for BGUBall webstie:
+- The list of all required packages to be installed so the website functions properly: 
+	install the following with npm:
+		express
+		body-parser
+                                cors
+		mysql
+		nodemon
+		
+
+- Routes:
+
+'/users' - get all users - read
+
+'/users/:id' - updateProfile - update
+
+'/games'-  get Games -read 
+                 createNewGame - create 
+
+'/games/:id' -  getGameDetails - read
+                      getGames - read
+                      deleteGame - delete
+                      createNewGame - create
+
+'/invitees' - getAllGamesInvitees - read
+                 deleteInvite - delete
+
+'/invitees/:game_id'- getGameInvitees - read
+
+ 
+- Syntax for creating the table:
+
+Users tabel:
+
+conn.query(
+        `CREATE TABLE IF NOT EXISTS web.users (
+            id INT NOT NULL AUTO_INCREMENT,
+            first_name VARCHAR(25) NOT NULL ,
+            last_name VARCHAR(25) NOT NULL ,
+            phone VARCHAR(25) NOT NULL ,
+            email VARCHAR(50) NOT NULL ,
+            password VARCHAR(25) NOT NULL ,
+            PRIMARY KEY (id)
+        );`,
+        function (err, data, fields) {
+            if (err) {
+                throw new Error(err.message);
+            } else {
+                console.log({
+                    status: "success",
+                    message: "users table created!",
+                });
+            }
+        }
+    );
+
+
+Games tabel:
+
+ conn.query(
+        `CREATE TABLE IF NOT EXISTS web.games (
+            id INT NOT NULL AUTO_INCREMENT,
+            organizer_id INT NOT NULL ,
+            date datetime NOT NULL ,
+            court VARCHAR(25) NOT NULL ,
+            phone VARCHAR(25) NOT NULL ,
+            PRIMARY KEY (id)
+        );`,
+        function (err, data, fields) {
+            if (err) {
+                throw new Error(err.message);
+            } else {
+                console.log({
+                    status: "success",
+                    message: "games table created!",
+                });
+            }
+        }
+    );
+
+
+Invites tabel:
+
+conn.query(
+        `CREATE TABLE IF NOT EXISTS web.invites (
+            game_id INT NOT NULL ,
+            user_id INT NOT NULL ,
+            PRIMARY KEY (game_id, user_id)
+        );`,
+        function (err, data, fields) {
+            if (err) {
+                throw new Error(err.message);
+            } else {
+                console.log({
+                    status: "success",
+                    message: "invites table created!",
+                });
+            }
+        }
+    );
+
+
+

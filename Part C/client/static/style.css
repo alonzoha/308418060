@@ -1,0 +1,348 @@
+
+
+body {
+
+	background-image: url("../static/images/bballsky.jpg");
+	background-repeat: no-repeat;
+    margin: 0;
+	padding: 0;
+	font-family: segoe UI Light, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: auto;
+	height:100%;
+}
+
+
+/*whole body*/
+.container{
+    display: grid;
+    grid-template-columns:  100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header"
+    "page";
+}
+
+.page {
+    grid-area: page;
+
+}
+
+/*header*/
+
+header {
+    grid-area: header;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: Chiller, sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#site_logo {
+    height: 100px;
+}
+
+nav {
+    font-weight: bold;
+    width: 100%;
+    margin-top:110px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: darksalmon;
+    border-radius: 8px;
+}
+
+header a, nav a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.navline {
+    margin: 30px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+#navJustTitle{
+    color: blue;
+}
+
+.top-line-left {
+    float: left;
+    margin: 10px;
+    padding-left: 10px;
+    transition: 0.2s;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top-line-right {
+    float: right;
+    margin: 10px;
+    padding-right: 10px;
+    transition: 0.2s;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top-line-left:hover,.top-line-right:hover,.navline:hover {
+    color: lightblue;
+}
+
+#notification {
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.fa-envelope {
+    color: black;
+}
+
+.fa-envelope:hover {
+    color: purple;
+}
+
+#notification .badge {
+	position: absolute;
+	top: -2px;
+	right: -1px;
+	padding: 5px 10px;
+	border-radius: 50%;
+	background: darksalmon;
+	color: white;
+	font-size: x-large;
+  }
+
+/* general */
+select, input[type=text], input[type=password], input[type=email], input[type=date], input[type=time], input[type=checkbox], input[type=number], input[type=tel],
+input[type=datetime-local] {
+	width: 50%;
+	padding: 14px 40px;
+	margin: 2px auto;
+	border:  2px solid #2463b6;
+	box-sizing: border-box;
+	top: 50%;
+	left: 50%;
+	border-radius:10px;
+	text-align: center;
+	display: block;
+	background: #ffffff89;
+	font-weight: bolder;
+}
+
+.logout {
+	padding: 14px 40px;
+	margin: 2px auto;
+	border: 2px solid #e9977a;
+	border-radius: 10px;
+	box-sizing: border-box;
+	top: 50%;
+	left: 50%;
+	border-radius:10px;
+	text-align: center;
+	display: block;
+	background: #ffffff89;
+	font-weight: bolder;
+	float: right;
+	margin-top: 30px;
+    cursor: pointer;
+}
+
+.formLabel{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.formTitle{
+	font-weight: bold;
+	font-size: 50px;
+	font-family: "SF Sports Night", sans-serif;
+}
+
+.forms{
+    border: 3px solid rgba(237, 242, 247, 0.89);
+    background: #ccdae491;
+    width:15cm;
+	padding: 14px 40px;
+	text-align: center;
+    margin: 20px auto;
+    /*margin-right: 300px;*/
+    /*margin-top: 30px;*/
+    /*margin: auto;*/
+}
+
+select:invalid {
+	color: gray; 
+}
+
+.button {
+	font-size: 20px;
+	font-family: segoe UI Light, sans-serif;
+	font-weight: bolder;
+	background-size: cover;
+	background-color: bisque;
+	border-color: transparent;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	color: coral;
+	cursor: pointer;
+}
+
+.button:active{
+ transform: scale(0.98);
+ box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.button:hover {
+    color: blue;
+    animation: jump 0.6s;
+    animation-iteration-count: 2;
+	/*animation-duration: 2s;*/
+}
+@keyframes jump {
+	100%{ background-image:url("../static/images/ballicon1.png");  }
+    50% { transform: translate(0px, 10px)  ; }
+}
+
+
+/* games table*/
+
+#games_table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ccc;
+    table-layout: fixed;
+    min-width: 400px;
+}
+
+#games_table thead tr {
+    background-color: darksalmon;
+    color: #ffffff;
+    text-align: center;
+}
+
+#games_table th, #games_table td {
+    text-align: center;
+    direction: ltr;
+    padding: 12px 15px;
+}
+
+#games_table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#games_table tbody tr.odd {
+  background-color: #f3f3f3;
+}
+
+#games_table tbody tr:nth-child(odd){
+  background-color: #f3f3f3;
+  color: black;
+}
+
+#games_table tbody tr:nth-child(even){
+  background-color: #fdf0e0;
+  color: black;
+}
+
+#games_table tbody tr:last-of-type {
+    border-bottom: 2px solid darksalmon;
+}
+
+
+#games_table tfoot tr td {
+  text-align: center;
+  background-color: #f3f3f3;
+}
+#games_table tfoot tr td a{
+  color: darksalmon;
+  font-weight: bolder;
+}
+
+#gamesDetail{
+    text-align: left;
+    list-style: none;
+    list-style-position: inside;
+    margin-right: 90px;
+    /*text-align: center;*/
+    /*grid-area: form;*/
+    /*border: 3px solid rgba(237, 242, 247, 0.89);*/
+    /*background: #ccdae491;*/
+    /*width:15cm;*/
+    /*margin: 20px auto;*/
+}
+
+.formLabelDetails{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+#signUpButt{
+   margin-left: 200px;
+   margin-top: 20px;
+}
+
+#inviteIcon{
+    margin-top: 50px;
+
+}
+
+#game_date{
+    margin-top: 40px;
+}
+
+#searchButt {
+    margin-right: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.normalText{
+   font-weight: bold;
+    font-size: 15px;
+}
+
+#Email{
+    margin-left: 130px;
+}
+ .ml2{
+     color: darkblue;
+ }
+
+ .cancel_reg {
+     color: red;
+     cursor: pointer;
+ }
+
+ .send-invite {
+    display: grid;
+    grid-template-columns: repeat(4,max-content);
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 30px
+ }
+
+ #invite-user {
+     width: 100%;
+ }
